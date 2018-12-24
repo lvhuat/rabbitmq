@@ -45,4 +45,4 @@ rabbit
 
 使用方法
 -------
-参考example文件件
+参考example文件夹
