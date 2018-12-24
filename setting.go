@@ -55,19 +55,19 @@ func NewQueueSettings() QueueSettings {
 	return map[string]bool{}
 }
 
-func (settings QueueSettings) Durable(able bool) QueueSettings {
-	settings[queueSettingPrefix+settingDurable] = able
+func (settings QueueSettings) Durable() QueueSettings {
+	settings[queueSettingPrefix+settingDurable] = true
 	return settings
 }
 
-func (settings QueueSettings) AutoDelete(able bool) QueueSettings {
-	settings[queueSettingPrefix+settingAutoDelete] = able
+func (settings QueueSettings) AutoDelete() QueueSettings {
+	settings[queueSettingPrefix+settingAutoDelete] = true
 
 	return settings
 }
 
-func (settings QueueSettings) Exclusive(able bool) QueueSettings {
-	settings[queueSettingPrefix+settingDurable] = able
+func (settings QueueSettings) Exclusive() QueueSettings {
+	settings[queueSettingPrefix+settingDurable] = true
 	return settings
 }
 
@@ -77,18 +77,18 @@ func NewExchangeSettings() ExchangeSettings {
 	return map[string]bool{}
 }
 
-func (settings ExchangeSettings) Durable(able bool) ExchangeSettings {
-	settings[exchangeSettingPrefix+settingDurable] = able
+func (settings ExchangeSettings) Durable() ExchangeSettings {
+	settings[exchangeSettingPrefix+settingDurable] = true
 	return settings
 }
 
-func (settings ExchangeSettings) AutoDelete(able bool) ExchangeSettings {
-	settings[exchangeSettingPrefix+settingAutoDelete] = able
+func (settings ExchangeSettings) AutoDelete() ExchangeSettings {
+	settings[exchangeSettingPrefix+settingAutoDelete] = true
 	return settings
 }
 
-func (settings ExchangeSettings) Internal(able bool) ExchangeSettings {
-	settings[exchangeSettingPrefix+settingInternal] = able
+func (settings ExchangeSettings) Internal() ExchangeSettings {
+	settings[exchangeSettingPrefix+settingInternal] = true
 	return settings
 }
 
@@ -98,18 +98,18 @@ func NewConsumeSettings() ConsumeSettings {
 	return map[string]bool{}
 }
 
-func (settings ConsumeSettings) AutoAck(able bool) ConsumeSettings {
-	settings[consumeSettingPrefix+settingAutoAck] = able
+func (settings ConsumeSettings) AutoAck() ConsumeSettings {
+	settings[consumeSettingPrefix+settingAutoAck] = true
 	return settings
 }
 
-func (settings ConsumeSettings) Exclusive(able bool) ConsumeSettings {
-	settings[consumeSettingPrefix+settingExclusive] = able
+func (settings ConsumeSettings) Exclusive() ConsumeSettings {
+	settings[consumeSettingPrefix+settingExclusive] = true
 	return settings
 }
 
-func (settings ConsumeSettings) NoLocal(able bool) ConsumeSettings {
-	settings[consumeSettingPrefix+settingNoLocal] = able
+func (settings ConsumeSettings) NoLocal() ConsumeSettings {
+	settings[consumeSettingPrefix+settingNoLocal] = true
 	return settings
 }
 

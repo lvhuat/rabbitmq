@@ -21,8 +21,8 @@ func main() {
 	if _, err := sess.DeclareAndHandleQueue(
 		"handle-queue", queueHandler,
 		mq.MakeupSettings(
-			mq.NewQueueSettings().Durable(true).AutoDelete(true),
-			mq.NewConsumeSettings().AutoAck(true),
+			mq.NewQueueSettings().Durable().AutoDelete(),
+			mq.NewConsumeSettings().AutoAck(),
 		)); err != nil {
 		panic(err)
 	}

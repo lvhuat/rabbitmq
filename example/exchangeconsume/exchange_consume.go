@@ -24,9 +24,9 @@ func main() {
 		"topic",
 		exchangeHandler,
 		mq.MakeupSettings(
-			mq.NewExchangeSettings().Durable(true),
-			mq.NewQueueSettings().Durable(true).AutoDelete(true),
-			mq.NewConsumeSettings().AutoAck(true),
+			mq.NewExchangeSettings().Durable(),
+			mq.NewQueueSettings().Durable().AutoDelete(),
+			mq.NewConsumeSettings().AutoAck(),
 		), "fruit.*", "vegetables.*"); err != nil {
 		panic(err)
 	}

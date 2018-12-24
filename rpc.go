@@ -60,7 +60,7 @@ func (util *RpcUtil) SetupReplyQueue(name string) error {
 	}
 
 	queue, err := util.sess.DeclareAndHandleQueue(name, handler,
-		NewQueueSettings().AutoDelete(true).Durable(false).Exclusive(false))
+		NewQueueSettings().AutoDelete().Durable().Exclusive())
 	if err != nil {
 		return err
 	}
