@@ -12,7 +12,7 @@ func exchangeHandler(delivery *amqp.Delivery) {
 }
 
 func main() {
-	sess, err := mq.Dial("amqp://guest:quest@127.0.0.1/test")
+	sess, err := mq.Dial("amqp://guest:guest@127.0.0.1:5672/test")
 	if err != nil {
 		panic(err)
 	}
